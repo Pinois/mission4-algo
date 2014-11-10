@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Main {
 	public static final int RANK = 0;
@@ -58,11 +61,16 @@ public class Main {
 					break;
 			}
 			if(enregistrement != null)
-				gestionEnregistrement.addEnregistrement(enregistrement.getTitle(), enregistrement);
+				gestionEnregistrement.putEnregistrement(enregistrement.getTitle(), enregistrement);
 		}
-		
+		List<Enregistrement> enreg = gestionEnregistrement.getEnregistrementsParDomaine(GestionEnregistrements.FOR2NAME, "1506");
+		if (enreg !=null) {
+			for (Enregistrement enregistrement : enreg) {
+				System.out.println(enregistrement.toString());
+			}
+		}
 		// simple test
-		System.out.println((gestionEnregistrement.getEnregistrement("Accounting Historians Journal")).toString());
+//		System.out.println((gestionEnregistrement.getEnregistrement("Accounting Historians Journal")).toString());
 	}
 	/**
 	 * vérifie si le token est un integer ou non
