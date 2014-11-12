@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -63,7 +62,7 @@ public class Main {
 			if(enregistrement != null)
 				gestionEnregistrement.putEnregistrement(enregistrement.getTitle(), enregistrement);
 		}
-		List<Enregistrement> enreg = gestionEnregistrement.getEnregistrementsParDomaine(GestionEnregistrements.FOR1NAME, "Business and Management");
+		List<Enregistrement> enreg = gestionEnregistrement.getEnregistrementsParDomaines(false, "", true, "Library and Information Studies", false, "Business and Management", false, "");
 		if (enreg !=null) {
 			for (Enregistrement enregistrement : enreg) {
 				System.out.println(enregistrement.toString());

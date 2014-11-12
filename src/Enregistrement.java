@@ -20,10 +20,10 @@ public class Enregistrement {
 		this.for3Name = for3Name;
 	}
 	public Enregistrement(String rank, String title, String for1, String for1Name, String for2, String for2Name) {
-		this(rank, title, for1, for1Name, for2, for2Name, null, null);
+		this(rank, title, for1, for1Name, for2, for2Name, "", "");
 	}
 	public Enregistrement(String rank, String title, String for1, String for1Name) {
-		this(rank, title, for1, for1Name, null, null, null, null);
+		this(rank, title, for1, for1Name, "", "", "", "");
 	}
 	
 	public String getRank() {
@@ -79,9 +79,9 @@ public class Enregistrement {
 		String result;
 		result = "titre : "+title;
 		result += "\n\tRank : "+rank+" ";
-		result += (for1!=null)? ("\n\t- FoR1 : "+for1+" => FoR1 Name : "+for1Name):"";
-		result += (for2!=null)? ("\n\t- FoR2 : "+for2+" => FoR2 Name : "+for2Name):"";
-		result += (for3!=null)? ("\n\t- FoR3 : "+for3+" => FoR3 Name : "+for3Name):"";
+		result += (!for1.isEmpty())? ("\n\t- FoR1 : "+for1+" => FoR1 Name : "+for1Name):"";
+		result += (!for2.isEmpty())? ("\n\t- FoR2 : "+for2+" => FoR2 Name : "+for2Name):"";
+		result += (!for3.isEmpty())? ("\n\t- FoR3 : "+for3+" => FoR3 Name : "+for3Name):"";
 		return result;
 	}
 }
