@@ -63,7 +63,7 @@ public class Main {
 			if(enregistrement != null)
 				gestionEnregistrement.putEnregistrement(enregistrement.getTitle(), enregistrement);
 		}
-		List<Enregistrement> enreg = gestionEnregistrement.getEnregistrementsParDomaine(GestionEnregistrements.FOR2NAME, "1506");
+		List<Enregistrement> enreg = gestionEnregistrement.getEnregistrementsParDomaine(GestionEnregistrements.FOR1NAME, "Business and Management");
 		if (enreg !=null) {
 			for (Enregistrement enregistrement : enreg) {
 				System.out.println(enregistrement.toString());
